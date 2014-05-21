@@ -1,0 +1,178 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="User_UserMasterPage, App_Web_pifb4kxi" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>rentnride</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="~/css/responsiveslides.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="../js/responsiveslides.min.js"></script>
+    <link href="../css/responsiveslides.css" rel="stylesheet" type="text/css" />
+
+   <%-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>--%>
+<script type="text/javascript">
+
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                maxwidth: 2500,
+                speed: 1200
+            });
+           
+        });
+      
+    </script>
+    
+
+		
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="frmcustomer" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <!---start-wrap---->
+    <!---start-header---->
+    <div class="header">
+        <div class="wrap">
+            <!---start-logo---->
+            <div class="logo">
+                <a href="../User/Search.aspx">
+                    <img src="../images/2.png" title="logo" /></a>
+            </div>
+            <!---End-logo---->
+            <!---start-top-nav---->
+            <div class="top-nav">
+               <%-- <ul>
+                    <li class="active"><a href="Search.aspx">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">My Booking</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>--%>
+                  <asp:ContentPlaceHolder ID="menulink" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear">
+            </div>
+            <!---End-top-nav---->
+        </div>
+        <!---End-header---->
+    </div>
+    <!---End-wrap---->
+    <asp:ContentPlaceHolder ID="imageslider" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="clear">
+    </div>
+    <!---start-content---->
+    <div class="content">
+        <div class="wrap">
+            <div class="content-grids">
+                <!-- contentplaceholder-->
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="specials">
+                
+                <div class="clear">
+                </div>
+                <div class="specials-grids">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+
+        <div class="testmonials">
+            <div class="wrap">
+                <div class="testmonial-grid">
+                    <asp:ContentPlaceHolder ID="tips" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <%--<img src="../images/5-Tips-for-Safe-Driving1.jpg" alt="image" height="200px" 
+                        width="1000px" />--%>
+                </div>
+            </div>
+        </div>
+                
+        </div>
+        <!---End-content---->
+        <!---start-footer---->
+        <div class="footer">
+            <div class="wrap">
+                <asp:ContentPlaceHolder ID="footerdiv" runat="server">
+                </asp:ContentPlaceHolder>
+                <%--<div class="footer-grids">
+                    <div class="footer-grid">
+                        <h3>
+                            EXTRAS</h3>
+                        <p>
+                            Ut rutrum neque a mollis laoreet diam enim feuiat dui nec ulacoper quam felis id
+                            diam. Nunc ut tortor ligula eu petiu risus. Pelleesque conquat dignissim lacus quis
+                            altrcies.</p>
+                    </div>
+                    <div class="footer-grid">
+                        <h3>
+                            RECENT POSTS</h3>
+                        <ul>
+                            <li><a href="#">Vestibulum felis</a></li>
+                            <li><a href="#">Mauris at tellus</a></li>
+                            <li><a href="#">Donec ut lectus</a></li>
+                            <li><a href="#">vitae interdum</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid">
+                        <h3>
+                            USEFUL INFO</h3>
+                        <ul>
+                            <li><a href="#">Hendrerit quam</a></li>
+                            <li><a href="#">Amet consectetur </a></li>
+                            <li><a href="#">Iquam hendrerit</a></li>
+                            <li><a href="#">Donec ut lectus </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid footer-lastgrid">
+                        <h3>
+                            CONTACT US</h3>
+                        <p>
+                            Pelleesque conquat dignissim lacus quis altrcies.</p>
+                        <div class="footer-grid-address">
+                            <p>
+                                Tel.800-255-9999</p>
+                            <p>
+                                Fax: 1234 568</p>
+                            <p>
+                                Email:<a class="email-link" href="#">Eaxmplesite@Demo.com</a></p>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>--%>
+            </div>
+        </div>
+        <!---End-footer---->
+        <div class="clear">
+        </div>
+        <div class="copy-right">
+            <p>
+                Design by Jasmin
+            </p>
+        </div>
+    </form>
+</body>
+</html>
